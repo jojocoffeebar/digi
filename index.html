@@ -1,162 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Lifeline - Finding the Missing in the Digital Age</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1516321310764-4dbded64e2e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        .nav-link:hover {
-            transform: translateY(-2px);
-            transition: all 0.3s ease;
-        }
-        .card {
-            transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        .card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .btn-primary {
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-        }
-        .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-        .sticky-nav {
-            backdrop-filter: blur(10px);
-            background-color: rgba(255,255,255,0.8);
-            transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Lifeline</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .hero-bg {
+      background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1516321310764-4dbded64e2e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .card {
+      transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    .sticky-nav {
+      backdrop-filter: blur(12px);
+      background-color: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav id="navbar" class="bg-white shadow-xl sticky top-0 z-50 transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex">
-                    <div class="flex-shrink-0 flex items-center">
-                        <h1 class="text-2xl font-bold text-blue-900">Digital Lifeline</h1>
-                    </div>
-                    <div class="hidden sm:ml-8 sm:flex sm:space-x-10">
-                        <a href="#home" class="nav-link border-blue-800 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-base font-semibold">Home</a>
-                        <a href="#about" class="nav-link text-gray-600 hover:border-blue-800 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-base font-semibold">About</a>
-                        <a href="#mission" class="nav-link text-gray-600 hover:border-blue-800 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-base font-semibold">Our Mission</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+<body class="bg-gray-50 text-gray-800">
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 animate-fadeIn">
-            <h1 class="text-5xl sm:text-6xl font-bold mb-6 leading-tight">Digital Lifeline</h1>
-            <p class="text-xl sm:text-2xl mb-8 max-w-2xl mx-auto">Harnessing cutting-edge technology to find the missing and reunite families across the UK.</p>
-            <a href="https://www.facebook.com/people/Digital-Lifeline/61575714603481/?rdid=2qDx8fJnicFmz2cB&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1QtKDDcuZi%2F class="btn-primary bg-blue-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-950 transition duration-300">Follow Us on Social Media</a>
-        </div>
-    </section>
+<!-- Navbar -->
+<nav id="navbar" class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <h1 class="text-2xl font-bold text-blue-900">Digital Lifeline</h1>
+      <div class="hidden sm:flex space-x-8 text-base font-semibold">
+        <a href="#home" class="hover:text-blue-900 transition-transform hover:-translate-y-1">Home</a>
+        <a href="#about" class="hover:text-blue-900 transition-transform hover:-translate-y-1">About</a>
+        <a href="#mission" class="hover:text-blue-900 transition-transform hover:-translate-y-1">Our Mission</a>
+      </div>
+    </div>
+  </div>
+</nav>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-gray-900 mb-10 text-center animate-fadeIn">Who We Are</h2>
-            <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto animate-fadeIn delay-200">
-                Digital Lifeline is an independent, non-profit organisation committed to locating missing persons in the digital era. Our dedicated team of trained volunteers and digital investigators collaborates closely with families, communities, and law enforcement across the UK to provide hope and support.
-            </p>
-        </div>
-    </section>
+<!-- Hero -->
+<section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white">
+  <div class="max-w-3xl mx-auto px-4 animate-fadeIn">
+    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">Digital Lifeline</h1>
+    <p class="text-xl md:text-2xl mb-8 drop-shadow-md">Using tech to reunite families across the UK.</p>
+    <a href="https://www.facebook.com/people/Digital-Lifeline/61575714603481/" class="btn-primary bg-blue-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-950 transition transform duration-300 inline-block">
+      Follow Us on Facebook
+    </a>
+  </div>
+</section>
 
-    <!-- Mission Section -->
-    <section id="mission" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">Our Mission</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card bg-white p-8 rounded-xl shadow-lg">
-                    <h3 class="text-2xl font-semibold text-blue-900 mb-4">Technology & Innovation</h3>
-                    <p class="text-gray-600 leading-relaxed">We leverage advanced technology, social media investigation, and ethical online profiling to uncover vital information that may lead to sightings and reunions.</p>
-                </div>
-                <div class="card bg-white p-8 rounded-xl shadow-lg">
-                    <h3 class="text-2xl font-semibold text-blue-900 mb-4">Compassion & Support</h3>
-                    <p class="text-gray-600 leading-relaxed">We partner with families, police, and organisations, offering empathy, clarity, and essential assistance during challenging times.</p>
-                </div>
-                <div class="card bg-white p-8 rounded-xl shadow-lg">
-                    <h3 class="text-2xl font-semibold text-blue-900 mb-4">Every Person Matters</h3>
-                    <p class="text-gray-600 leading-relaxed">With every search, we aim to bring missing persons home, combining compassion with innovation to create meaningful impact.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- About -->
+<section id="about" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-4xl font-bold mb-8">Who We Are</h2>
+    <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+      We’re a non-profit organisation committed to locating missing persons through digital investigation. With a team of skilled volunteers, we bring families hope and support using the power of modern technology.
+    </p>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="bg-blue-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Digital Lifeline</h3>
-                    <p class="text-gray-300 leading-relaxed">An independent non-profit dedicated to finding the missing in the digital age.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="text-gray-300 hover:text-white transition duration-300">Home</a></li>
-                        <li><a href="#about" class="text-gray-300 hover:text-white transition duration-300">About</a></li>
-                        <li><a href="#mission" class="text-gray-300 hover:text-white transition duration-300">Our Mission</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
-                    <p class="text-gray-300 mb-2">Email: info@digitallifeline.uk</p>
-                    <p class="text-gray-300">
-                        <a href="https://wa.me/447960270892" class="text-gray-300 hover:text-white transition duration-300">WhatsApp: +44 79 602 70892</a>
-                    </p>
-                </div>
-            </div>
-            <div class="mt-12 border-t border-blue-800 pt-6 text-center">
-                <p class="text-gray-300">© 2025 Digital Lifeline. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+<!-- Mission -->
+<section id="mission" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-4xl font-bold mb-12">Our Mission</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+        <h3 class="text-2xl font-semibold text-blue-900 mb-4">Technology & Innovation</h3>
+        <p class="text-gray-600">We use modern tools—OSINT, AI, social analysis—to uncover vital leads and help bring loved ones home.</p>
+      </div>
+      <div class="card bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+        <h3 class="text-2xl font-semibold text-blue-900 mb-4">Compassion & Support</h3>
+        <p class="text-gray-600">We guide families with empathy and care, working closely with authorities to provide clarity and help.</p>
+      </div>
+      <div class="card bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+        <h3 class="text-2xl font-semibold text-blue-900 mb-4">Every Person Matters</h3>
+        <p class="text-gray-600">Our mission is personal—every missing person is someone’s loved one. We never stop searching.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        // Animate cards on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.2 });
+<!-- Footer -->
+<footer class="bg-blue-900 text-white py-12 mt-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-sm">
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Digital Lifeline</h3>
+        <p class="text-gray-300">An independent non-profit dedicated to finding the missing in the digital age.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#home" class="hover:text-white">Home</a></li>
+          <li><a href="#about" class="hover:text-white">About</a></li>
+          <li><a href="#mission" class="hover:text-white">Our Mission</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Contact</h3>
+        <p>Email: <a href="mailto:info@digitallifeline.uk" class="hover:text-white">info@digitallifeline.uk</a></p>
+        <p>WhatsApp: <a href="https://wa.me/447960270892" class="hover:text-white">+44 79 602 70892</a></p>
+      </div>
+    </div>
+    <div class="mt-10 border-t border-blue-800 pt-6 text-center text-gray-300 text-sm">
+      &copy; 2025 Digital Lifeline. All rights reserved.
+    </div>
+  </div>
+</footer>
 
-        document.querySelectorAll('.card').forEach(card => {
-            observer.observe(card);
-        });
+<script>
+  // Animate cards on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
 
-        // Add blur background on nav when scrolling
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('sticky-nav');
-            } else {
-                navbar.classList.remove('sticky-nav');
-            }
-        });
-    </script>
+  document.querySelectorAll('.card').forEach(card => {
+    observer.observe(card);
+  });
+
+  // Sticky Nav Effect
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('sticky-nav');
+    } else {
+      navbar.classList.remove('sticky-nav');
+    }
+  });
+</script>
+
 </body>
 </html>
