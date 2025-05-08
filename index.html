@@ -14,119 +14,112 @@
       font-family: 'Inter', sans-serif;
     }
     .hero-bg {
-      background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1516321310764-4dbded64e2e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-image: linear-gradient(to bottom right, rgba(63, 81, 181, 0.8), rgba(103, 58, 183, 0.8)), url('https://images.unsplash.com/photo-1516321310764-4dbded64e2e4?auto=format&fit=crop&w=1350&q=80');
       background-size: cover;
       background-position: center;
     }
+    .sticky-nav {
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
     .card {
-      transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
-      opacity: 0;
+      transition: all 0.4s ease;
       transform: translateY(20px);
+      opacity: 0;
     }
     .card.visible {
-      opacity: 1;
       transform: translateY(0);
+      opacity: 1;
     }
-    .btn-primary:hover {
+    .glow-btn:hover {
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
       transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-    .sticky-nav {
-      backdrop-filter: blur(12px);
-      background-color: rgba(255, 255, 255, 0.85);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease-in-out;
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
 <!-- Navbar -->
-<nav id="navbar" class="bg-white shadow sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16 items-center">
-      <h1 class="text-2xl font-bold text-blue-900">Digital Lifeline</h1>
-      <div class="hidden sm:flex space-x-8 text-base font-semibold">
-        <a href="#home" class="hover:text-blue-900 transition-transform hover:-translate-y-1">Home</a>
-        <a href="#about" class="hover:text-blue-900 transition-transform hover:-translate-y-1">About</a>
-        <a href="#mission" class="hover:text-blue-900 transition-transform hover:-translate-y-1">Our Mission</a>
-      </div>
+<nav id="navbar" class="sticky top-0 z-50 bg-white transition-all">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-indigo-700">Digital Lifeline</h1>
+    <div class="hidden md:flex space-x-8 font-medium">
+      <a href="#home" class="text-gray-700 hover:text-indigo-700">Home</a>
+      <a href="#about" class="text-gray-700 hover:text-indigo-700">About</a>
+      <a href="#mission" class="text-gray-700 hover:text-indigo-700">Mission</a>
     </div>
   </div>
 </nav>
 
 <!-- Hero -->
-<section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white">
-  <div class="max-w-3xl mx-auto px-4 animate-fadeIn">
-    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">Digital Lifeline</h1>
-    <p class="text-xl md:text-2xl mb-8 drop-shadow-md">Using tech to reunite families across the UK.</p>
-    <a href="https://www.facebook.com/people/Digital-Lifeline/61575714603481/" class="btn-primary bg-blue-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-950 transition transform duration-300 inline-block">
-      Follow Us on Facebook
-    </a>
+<section id="home" class="hero-bg h-screen flex items-center justify-center text-white text-center">
+  <div class="px-4">
+    <h1 class="text-5xl md:text-6xl font-bold mb-6">Digital Lifeline</h1>
+    <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Harnessing digital power to bring missing loved ones home—one search at a time.</p>
+    <a href="https://www.facebook.com/people/Digital-Lifeline/61575714603481/" class="glow-btn bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold transition-transform duration-300 hover:bg-indigo-700">Follow on Facebook</a>
   </div>
 </section>
 
 <!-- About -->
 <section id="about" class="py-20 bg-white">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-4xl font-bold mb-8">Who We Are</h2>
-    <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-      We’re a non-profit organisation committed to locating missing persons through digital investigation. With a team of skilled volunteers, we bring families hope and support using the power of modern technology.
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-4xl font-bold text-indigo-700 mb-6">Who We Are</h2>
+    <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+      We are an independent UK-based non-profit dedicated to using digital tools to help locate missing persons. Our team combines compassion and technology to reunite families and provide vital support in difficult times.
     </p>
   </div>
 </section>
 
 <!-- Mission -->
-<section id="mission" class="py-20 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-4xl font-bold mb-12">Our Mission</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="card bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-        <h3 class="text-2xl font-semibold text-blue-900 mb-4">Technology & Innovation</h3>
-        <p class="text-gray-600">We use modern tools—OSINT, AI, social analysis—to uncover vital leads and help bring loved ones home.</p>
+<section id="mission" class="py-20 bg-gradient-to-r from-indigo-50 to-violet-50">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h2 class="text-4xl font-bold text-indigo-700 mb-12">Our Mission</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+        <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Technology & Innovation</h3>
+        <p class="text-gray-600">Using OSINT, data analytics, and ethical digital profiling to uncover leads and assist searches.</p>
       </div>
-      <div class="card bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-        <h3 class="text-2xl font-semibold text-blue-900 mb-4">Compassion & Support</h3>
-        <p class="text-gray-600">We guide families with empathy and care, working closely with authorities to provide clarity and help.</p>
+      <div class="card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+        <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Compassion & Support</h3>
+        <p class="text-gray-600">We work hand-in-hand with families, providing clear communication and ongoing emotional support.</p>
       </div>
-      <div class="card bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-        <h3 class="text-2xl font-semibold text-blue-900 mb-4">Every Person Matters</h3>
-        <p class="text-gray-600">Our mission is personal—every missing person is someone’s loved one. We never stop searching.</p>
+      <div class="card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+        <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Every Life Matters</h3>
+        <p class="text-gray-600">No case is too small. Every missing person is someone’s loved one—and deserves to be found.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-blue-900 text-white py-12 mt-12">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-sm">
-      <div>
-        <h3 class="text-xl font-semibold mb-4">Digital Lifeline</h3>
-        <p class="text-gray-300">An independent non-profit dedicated to finding the missing in the digital age.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-        <ul class="space-y-2">
-          <li><a href="#home" class="hover:text-white">Home</a></li>
-          <li><a href="#about" class="hover:text-white">About</a></li>
-          <li><a href="#mission" class="hover:text-white">Our Mission</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold mb-4">Contact</h3>
-        <p>Email: <a href="mailto:info@digitallifeline.uk" class="hover:text-white">info@digitallifeline.uk</a></p>
-        <p>WhatsApp: <a href="https://wa.me/447960270892" class="hover:text-white">+44 79 602 70892</a></p>
-      </div>
+<footer class="bg-indigo-900 text-white py-12 mt-12">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 text-sm">
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Digital Lifeline</h3>
+      <p class="text-indigo-200">We are a tech-powered non-profit fighting to reunite families across the UK.</p>
     </div>
-    <div class="mt-10 border-t border-blue-800 pt-6 text-center text-gray-300 text-sm">
-      &copy; 2025 Digital Lifeline. All rights reserved.
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Navigation</h3>
+      <ul class="space-y-2">
+        <li><a href="#home" class="text-indigo-200 hover:text-white">Home</a></li>
+        <li><a href="#about" class="text-indigo-200 hover:text-white">About</a></li>
+        <li><a href="#mission" class="text-indigo-200 hover:text-white">Mission</a></li>
+      </ul>
     </div>
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Contact</h3>
+      <p class="text-indigo-200">info@digitallifeline.uk</p>
+      <p><a href="https://wa.me/447960270892" class="text-indigo-200 hover:text-white">WhatsApp: +44 79 602 70892</a></p>
+    </div>
+  </div>
+  <div class="mt-10 text-center text-indigo-300 text-sm">
+    © 2025 Digital Lifeline. All rights reserved.
   </div>
 </footer>
 
 <script>
-  // Animate cards on scroll
+  // Card entrance animation
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -139,10 +132,10 @@
     observer.observe(card);
   });
 
-  // Sticky Nav Effect
+  // Sticky nav styling
   window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
+    if (window.scrollY > 30) {
       navbar.classList.add('sticky-nav');
     } else {
       navbar.classList.remove('sticky-nav');
