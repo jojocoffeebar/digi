@@ -1,147 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Digital Lifeline</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    .hero-bg {
-      background-image: linear-gradient(to bottom right, rgba(63, 81, 181, 0.8), rgba(103, 58, 183, 0.8)), url('https://images.unsplash.com/photo-1516321310764-4dbded64e2e4?auto=format&fit=crop&w=1350&q=80');
-      background-size: cover;
-      background-position: center;
-    }
-    .sticky-nav {
-      backdrop-filter: blur(10px);
-      background-color: rgba(255, 255, 255, 0.85);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-    .card {
-      transition: all 0.4s ease;
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    .card.visible {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    .glow-btn:hover {
-      box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
-      transform: scale(1.05);
-    }
-  </style>
-</head>
-<body class="bg-gray-100 text-gray-800">
-
-<!-- Navbar -->
-<nav id="navbar" class="sticky top-0 z-50 bg-white transition-all">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-indigo-700">Digital Lifeline</h1>
-    <div class="hidden md:flex space-x-8 font-medium">
-      <a href="#home" class="text-gray-700 hover:text-indigo-700">Home</a>
-      <a href="#about" class="text-gray-700 hover:text-indigo-700">About</a>
-      <a href="#mission" class="text-gray-700 hover:text-indigo-700">Mission</a>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero -->
-<section id="home" class="hero-bg h-screen flex items-center justify-center text-white text-center">
-  <div class="px-4">
-    <h1 class="text-5xl md:text-6xl font-bold mb-6">Digital Lifeline</h1>
-    <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Harnessing digital power to bring missing loved ones home—one search at a time.</p>
-    <a href="https://www.facebook.com/people/Digital-Lifeline/61575714603481/" class="glow-btn bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold transition-transform duration-300 hover:bg-indigo-700">Follow on Facebook</a>
-  </div>
-</section>
-
-<!-- About -->
-<section id="about" class="py-20 bg-white">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-4xl font-bold text-indigo-700 mb-6">Who We Are</h2>
-    <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-      We are an independent UK-based non-profit dedicated to using digital tools to help locate missing persons. Our team combines compassion and technology to reunite families and provide vital support in difficult times.
-    </p>
-  </div>
-</section>
-
-<!-- Mission -->
-<section id="mission" class="py-20 bg-gradient-to-r from-indigo-50 to-violet-50">
-  <div class="max-w-7xl mx-auto px-4 text-center">
-    <h2 class="text-4xl font-bold text-indigo-700 mb-12">Our Mission</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-      <div class="card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-        <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Technology & Innovation</h3>
-        <p class="text-gray-600">Using OSINT, data analytics, and ethical digital profiling to uncover leads and assist searches.</p>
-      </div>
-      <div class="card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-        <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Compassion & Support</h3>
-        <p class="text-gray-600">We work hand-in-hand with families, providing clear communication and ongoing emotional support.</p>
-      </div>
-      <div class="card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-        <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Every Life Matters</h3>
-        <p class="text-gray-600">No case is too small. Every missing person is someone’s loved one—and deserves to be found.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-indigo-900 text-white py-12 mt-12">
-  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 text-sm">
-    <div>
-      <h3 class="text-lg font-semibold mb-3">Digital Lifeline</h3>
-      <p class="text-indigo-200">We are a tech-powered non-profit fighting to reunite families across the UK.</p>
-    </div>
-    <div>
-      <h3 class="text-lg font-semibold mb-3">Navigation</h3>
-      <ul class="space-y-2">
-        <li><a href="#home" class="text-indigo-200 hover:text-white">Home</a></li>
-        <li><a href="#about" class="text-indigo-200 hover:text-white">About</a></li>
-        <li><a href="#mission" class="text-indigo-200 hover:text-white">Mission</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="text-lg font-semibold mb-3">Contact</h3>
-      <p class="text-indigo-200">info@digitallifeline.uk</p>
-      <p><a href="https://wa.me/447960270892" class="text-indigo-200 hover:text-white">WhatsApp: +44 79 602 70892</a></p>
-    </div>
-  </div>
-  <div class="mt-10 text-center text-indigo-300 text-sm">
-    © 2025 Digital Lifeline. All rights reserved.
-  </div>
-</footer>
-
-<script>
-  // Card entrance animation
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Lifeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Orbitron', sans-serif;
+        background: radial-gradient(circle at top left, #b3e5fc, #e0f7ff);
+        color: #00111a;
       }
-    });
-  }, { threshold: 0.1 });
+      .glass-card {
+        backdrop-filter: blur(24px);
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: transform 0.4s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        color: #00111a;
+      }
+      .glass-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body class="text-gray-900">
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-white/90 shadow-md">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-800">Digital Lifeline</h1>
+        <div class="hidden md:flex space-x-8 font-medium">
+          <a href="#home" class="hover:text-blue-800">Home</a>
+          <a href="#about" class="hover:text-blue-800">About</a>
+          <a href="#mission" class="hover:text-blue-800">Mission</a>
+          <a href="#blog" class="hover:text-blue-800">Blog</a>
+        </div>
+      </div>
+    </nav>
 
-  document.querySelectorAll('.card').forEach(card => {
-    observer.observe(card);
-  });
+    <section id="home" class="h-screen flex items-center justify-center text-center pt-20 px-4">
+      <div>
+        <h1 class="text-5xl md:text-6xl font-extrabold text-blue-900 mb-6">AI for the Missing</h1>
+        <p class="text-lg md:text-xl text-blue-900 mb-8 max-w-2xl mx-auto">
+          Every second counts. We use AI to accelerate searches and reunite families.
+        </p>
+        <a href="https://www.facebook.com/people/Digital-Lifeline/61575714603481/" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-md hover:bg-blue-700 transition-transform transform hover:scale-105">
+          🚨 Follow Our Mission
+        </a>
+      </div>
+    </section>
 
-  // Sticky nav styling
-  window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 30) {
-      navbar.classList.add('sticky-nav');
-    } else {
-      navbar.classList.remove('sticky-nav');
-    }
-  });
-</script>
+    <section id="about" class="py-24 bg-white">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-blue-800 mb-6">Who We Are</h2>
+        <p class="text-lg text-gray-800 leading-relaxed">
+          We are a UK-based AI-driven non-profit leveraging emerging technologies to trace and support missing individuals, driven by compassion and powered by data.
+        </p>
+      </div>
+    </section>
 
-</body>
+    <section id="mission" class="py-24 bg-gradient-to-r from-blue-100 to-cyan-100">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-blue-800 mb-16">Our Mission</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div class="glass-card p-8 rounded-2xl" >
+            <a href="https://ibb.co/DfGhD5VS"><img src="https://i.ibb.co/DfGhD5VS/image.png" class="w-20 h-20 mx-auto mb-4" alt="AI Icon" border="0"></a>
+            <h3 class="text-2xl font-semibold text-blue-800 mb-4">AI Search Systems</h3>
+            <p class="text-sm">Using intelligent algorithms, OSINT and deep digital profiling to identify promising leads in missing persons cases.</p>
+          </div>
+          <div class="glass-card p-8 rounded-2xl" >
+            <a href="https://ibb.co/LzQtL0Yz"><img src="https://i.ibb.co/LzQtL0Yz/image.png" class="w-20 h-20 mx-auto mb-4" alt="Support Icon" border="0"></a>
+            <h3 class="text-2xl font-semibold text-blue-800 mb-4">Human Support</h3>
+            <p class="text-sm">Providing continuous emotional assistance to families, with timely updates and personalized care.</p>
+          </div>
+          <div class="glass-card p-8 rounded-2xl" >
+            <a href="https://ibb.co/FbWNZFz4"><img src="https://i.ibb.co/FbWNZFz4/image.png" class="w-20 h-20 mx-auto mb-4" alt="Life Icon" border="0"></a>
+            <h3 class="text-2xl font-semibold text-blue-800 mb-4">Every Soul Counts</h3>
+            <p class="text-sm">Every individual is important. We fight for every case with equal attention, urgency, and care.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-blue-800 mb-12">Latest Updates</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-blue-50 p-6 rounded-xl shadow-sm">
+            <h3 class="text-xl font-semibold text-blue-800 mb-2">New AI Tools in Action</h3>
+            <p class="text-gray-800 text-sm">How our upgraded algorithms helped locate a vulnerable adult in 36 hours.</p>
+          </div>
+          <div class="bg-blue-50 p-6 rounded-xl shadow-sm">
+            <h3 class="text-xl font-semibold text-blue-800 mb-2">Partnerships That Save Lives</h3>
+            <p class="text-gray-800 text-sm">We’ve joined forces with tech firms to bring faster, smarter location systems to families.</p>
+          </div>
+          <div class="bg-blue-50 p-6 rounded-xl shadow-sm">
+            <h3 class="text-xl font-semibold text-blue-800 mb-2">Volunteer Spotlight</h3>
+            <p class="text-gray-800 text-sm">Meet Sarah, a volunteer analyst whose quick thinking cracked a major case last month.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-blue-900 text-white py-12 mt-12">
+      <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 text-sm">
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Digital Lifeline</h3>
+          <p class="text-blue-200">We are a tech-powered non-profit fighting to reunite families across the UK.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Navigation</h3>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-blue-200 hover:text-white">Home</a></li>
+            <li><a href="#about" class="text-blue-200 hover:text-white">About</a></li>
+            <li><a href="#mission" class="text-blue-200 hover:text-white">Mission</a></li>
+            <li><a href="#blog" class="text-blue-200 hover:text-white">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Contact</h3>
+          <p class="text-blue-200">info@digitallifeline.uk</p>
+          <p><a href="https://wa.me/447960270892" class="text-blue-200 hover:text-white">WhatsApp: +44 79 602 70892</a></p>
+        </div>
+      </div>
+      <div class="mt-10 text-center text-blue-300 text-sm">
+        © 2025 Digital Lifeline. All rights reserved.
+      </div>
+    </footer>
+  </body>
 </html>
